@@ -1,0 +1,113 @@
+
+<form #employeeForm="ngForm" (ngSubmit)="saveEmployee(employeeForm)"> 
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Create Employee</h3>
+    </div>
+    <div class="panel-body">
+
+            <div class="col-lg-3 col-lg-offset-3">
+      <div class="form-group">
+        <label for="fullName">First Name</label>
+        <input id="fullName" type="text" class="form-control"
+               name="fullName" [(ngModel)]="fullName">
+ 
+     </div>
+</div>
+<div class="col-md-3">
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input id="lastName" type="text" class="form-control"
+               name="lastName" [(ngModel)]="lastName">
+ 
+     </div>
+ </div>
+ <div class="col-md-6 col-md-offset-3">
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input id="address" type="text" class="form-control"
+               name="address" [(ngModel)]="address">
+ 
+     </div>
+ </div>
+ <div class="col-lg-3 col-lg-offset-3"
+      <div class="form-group">
+        <label for="phoneno">Phone No</label>
+        <input id="phoneno" type="text" class="form-control"
+               name="phoneno" [(ngModel)]="phoneno">
+ 
+     </div>
+ 
+ <div class=" col-md-3">
+      <div class="form-group">
+        <label for="CNICno">CNIC No</label>
+        <input id="CNICno" type="text" class="form-control"
+               name="CNICno" [(ngModel)]="CNICno">
+ 
+     </div>
+ </div>
+<div class="col-md-3 col-md-offset-3">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="text" class="form-control"
+               name="email" [(ngModel)]="email">
+      </div>
+</div>
+    
+    <!--i am moving submit button at the botumn of form because i want map template before submit-->
+ 
+  <!--This is the map functionality HTML . it will start from here! we will later inject it as a template on document.ready() -->
+</div>
+ 
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div id="mode-selector" class="controls">
+                                <input type="radio" name="type" id="changemode-walking" checked="checked">
+                                <label for="changemode-walking">Walking</label>
+
+                            <input type="radio" name="type" id="changemode-transit">
+                                <label for="changemode-transit">Transit</label>
+
+                                <input type="radio" name="type" id="changemode-driving">
+                                <label for="changemode-driving">Driving</label>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    
+                    <div class="col-md-12">
+                        <div class="row searchboxs">
+                            <input id="origin-input" class="form-control col-md-12" type="text" placeholder="Enter an origin location">                    
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row searchboxs">
+                            <input id="destination-input" class="form-control col-md-12" type="text" placeholder="Enter a destination location">                    
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="map"></div>
+            </div>
+            <div class="col-md-12">
+                Start lat : <span id="startlat"></span><br>
+                Start lng : <span id="startlng"></span><br>
+                End lat : <span id="endlat"></span><br>
+                End lng : <span id="endlng"></span><br>
+            </div>
+        
+
+
+  <!--The map setup/template ends here!!-->
+  <!--Submit button starts here-->
+  <div class="panel-footer">
+      <button class="btn btn-primary" type="submit">Save</button>
+    </div>
+ </div>
+</div>
+</form>

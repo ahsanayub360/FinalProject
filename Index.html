@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Form</title>
+  
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.googlemap/1.5/jquery.googlemap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+<link rel="stylesheet" href="app/style/mapstyle.css">
+<script src="app/script/maploader.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.js"></script>
+<!--   <script src="app/routes/routeLogic.js"></script> -->
+ 
+<!--  
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxBruzNWomRwIcEAdYHovZpAdnnCMxaz8&libraries=places&callback=initMap"
+        async defer></script> 
+ --> 
+</head>
+<body>
+<!--Body Starts from here-->
+<!-- 
+<div ng-include="'app/templates/form.html'">
+
+  
+</div>
+ -->
+<script type="text/ng-template" id="home.html">
+  This is the content of the template
+</script>
+<div ng-view></div>
+
+<a href="#!form"> click to go to form</a>
+<br>
+<a href="#!red">click to go see Red</a>
+<br>
+<a href="#!home.html"> click for home</a>
+</body>
+</html>
